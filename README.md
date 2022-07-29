@@ -1,4 +1,4 @@
-<h1>Ivanti coding test</h1>
+# Ivanti coding test #
 
 Welcome to the Ivanti coding test.
 
@@ -9,3 +9,5 @@ The solution contains 2 projects:
 * CodingTest_Test: contains the test class for this method
 
 The objective of this test is simple: **make the UserService class testable and add full test coverage for the `GetUsername()` method**. The repository class should not be tested or modified.
+
+Please create a branch on this repository and push your code to this branch.

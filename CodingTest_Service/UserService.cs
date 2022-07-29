@@ -16,7 +16,7 @@ namespace CodingTest
 			UserRepository m_userRepository = new UserRepository();
 			User user = m_userRepository.GetUser(userId);
 			
-			if ("admin".Equals(user.LastName))
+			if ("Admin".Equals(user.LastName))
 				throw new AccessViolationException();
 
 			return $"{user.FirstName} {user.LastName}";
