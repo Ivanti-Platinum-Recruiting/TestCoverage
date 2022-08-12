@@ -3,9 +3,9 @@ using System;
 
 namespace CodingTest
 {
-	/// <summary>This class must not be modified.</summary>
 	public class UserRepository
 	{
+		/// THIS METHOD MUST NOT BE MODIFIED
 		/// <summary>Returns a random user from a static list.</summary>
 		public User GetUser(int userId)
 		{
