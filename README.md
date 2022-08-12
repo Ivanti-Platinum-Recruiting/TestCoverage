@@ -8,6 +8,6 @@ The solution contains 2 projects:
 * CodingTest_Service: contains the UserService class with a single `GetUsername()` method
 * CodingTest_Test: contains the test class for this method
 
-The objective of this test is simple: **make the UserService class testable and add full test coverage for the `GetUsername()` method**. The repository class should not be tested or modified.
+The objective of this test is simple: **make the UserService class testable and add full test coverage for the `GetUsername()` method**. The repository can be modified but the GetUser() method must be left as it is.
 
 Please create a branch on this repository and push your code to this branch.
