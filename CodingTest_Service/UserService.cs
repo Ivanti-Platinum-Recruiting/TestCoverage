@@ -8,15 +8,24 @@ namespace CodingTest
 	/// </summary>
 	public class UserService
 	{
+		private IRepositoryWrapper _wrapper;
+
+		public UserService(IRepositoryWrapper wrapper)
+		{
+			_wrapper = wrapper;
+		}
+
 		public string GetUsername(int userId)
 		{
 			if (userId < 0)
-				return "User does not exist";
+				return ErrorMessages.USER_DOES_NOT_EXIST;
 
-			UserRepository m_userRepository = new UserRepository();
-			User user = m_userRepository.GetUser(userId);
+			var user = _wrapper.GetUser(userId);
+
+			if (user == null)
+				return ErrorMessages.USER_DOES_NOT_EXIST;
 			
-			if ("Admin".Equals(user.LastName))
+			if ("Admin".Equals(user.LastName) && string.IsNullOrEmpty(user.FirstName))
 				throw new AccessViolationException();
 
 			return $"{user.FirstName} {user.LastName}";
